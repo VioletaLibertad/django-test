@@ -13,9 +13,10 @@
 </head>
 <body>
   <div class="header">
-    <h1 class="main_title">Violeta's Blog</h1>
+    <a href="{% url 'post_list' %}"><h1 class="main_title">Violeta's Blog</h1></a>
   </div>
   <div class="container">
+    <a href="{% url 'post_new' %}" class="new_post">Nuevo post<span class="glyphicon glyphicon-plus"></span></a>
     {% block content %}
     {% endblock %}
   </div>

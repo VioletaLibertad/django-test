@@ -17,3 +17,13 @@ body {
   font-family: 'Kulim Park', sans-serif;
   font-weight: bold;
 }
+
+.new_post {
+  color: #228686;
+  float: right;
+  padding: 1rem;
+}
+
+.glyphicon {
+  padding-left: 1rem;
+}
