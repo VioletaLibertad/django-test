@@ -1,0 +1,19 @@
+body {
+  background: #f5e9d7;
+}
+
+.header {
+  background-color: #228686;
+}
+
+.main_title {
+  font-family: 'Kulim Park', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: #ffebcd;
+}
+
+.post_title {
+  font-family: 'Kulim Park', sans-serif;
+  font-weight: bold;
+}
