@@ -4,13 +4,13 @@
   <div class="post">
     <h2 class="post_title">{{ post.title }}</h2>
     {% if post.published_date %}
-      <p>Publicado: {{ post.published_date }}</p>
+      <p class="post_date">Publicado: {{ post.published_date }}</p>
     {% endif %}
       <p>{{ post.text|linebreaksbr }}</p>
-      <div>
-        <a href="{% url 'post_list' %}"><span class="glyphicon glyphicon-arrow-left"></span></a>
+      <div class="detail_buttons">
+        <a class="btn btn-warning" href="{% url 'post_list' %}">Volver<span class="glyphicon glyphicon-arrow-left"></span></a>
         {% if user.is_authenticated %}
-          <a href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a class="btn btn-info" href="{% url 'post_edit' pk=post.pk %}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
       </div>
   </div>

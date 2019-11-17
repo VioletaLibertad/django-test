@@ -16,9 +16,11 @@
     <a href="{% url 'post_list' %}"><h1 class="main_title">Violeta's Blog</h1></a>
   </div>
   <div class="container">
-    {% if user.is_authenticated %}
-      <a href="{% url 'post_new' %}" class="new_post">Nuevo post<span class="glyphicon glyphicon-plus"></span></a>
-    {% endif %}
+    <div>
+      {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="new_post">Nuevo post<span class="glyphicon glyphicon-plus"></span></a>
+      {% endif %}
+    </div>
     {% block content %}
     {% endblock %}
   </div>

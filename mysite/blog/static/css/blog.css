@@ -22,8 +22,14 @@ body {
   color: #228686;
   float: right;
   padding: 1rem;
+  margin: 1rem;
+  display: block;
 }
 
 .glyphicon {
   padding-left: 1rem;
+}
+
+.post_date {
+  font-style: oblique;
 }
