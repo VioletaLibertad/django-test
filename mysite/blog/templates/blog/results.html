@@ -1,9 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-  <h2>Respuestas en Typeform</h2>
-  <h4>Formulario: {{form.form_name}}</h4>
-  {% for question in form.questions %}
-    <p>{{question.name}}</p>
-  {% endfor %}
+  <div class="m-3">
+    <h2>Respuestas en Typeform</h2>
+    <h4>Formulario: {{form.form_name}}</h4>
+    {% for question in form.questions %}
+      <p>{{question.name}}</p>
+    {% endfor %}
+  </div>
 {% endblock %}
