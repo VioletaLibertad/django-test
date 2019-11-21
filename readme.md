@@ -5,7 +5,7 @@ All the structure was created following the instructions here: [Django Girls](ht
 
 The idea behind this was to create a simple blog, in which you could perform basic CRUD operations. 
 
-Later, it has used as a base to test the [Typeform API](https://developer.typeform.com/get-started/) and its Responses API.
+Later, it was used as a base to test the [Typeform API](https://developer.typeform.com/get-started/) and its Responses API.
 
 The data from responses it's also saved here: [Google Sheet](https://docs.google.com/spreadsheets/d/1GO1Gkc1tfAgw0ti-007_cx4K6nN6siUXErskbDCkqnY/edit#gid=249915197)
 
