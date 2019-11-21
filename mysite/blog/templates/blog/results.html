@@ -3,9 +3,14 @@
 {% block content %}
   <div class="m-3">
     <h2>Respuestas en Typeform</h2>
-    <h4>Formulario: {{form.form_name}}</h4>
-    {% for question in form.questions %}
-      <p>{{question.name}}</p>
+    <h4 class="mt-5">Formulario: {{complete_form.form_name}}</h4>
+    {% for data_set in complete_form.data %}
+      <p>{{data_set.question}}</p>
+      {% if data_set.answer.type == 'number' %}
+        <p>Respuesta: {{data_set.answer.number}}</p>
+      {% elif data_set.answer.type == 'boolean' %}
+        <p>Respuesta: {{data_set.answer.boolean}}</p>
+      {% endif %}
     {% endfor %}
   </div>
 {% endblock %}

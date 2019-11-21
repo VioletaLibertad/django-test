@@ -19,3 +19,12 @@ class Typeform:
         questions.append(question)
     form['questions'] = questions
     return form
+  
+  def retrieve_form_answers(self, token):
+    endpoint = '{url}forms/{form_id}/responses?included_response_ids={token}'
+    url = endpoint.format(url=self.url, form_id=self.form_id, token=token)
+    headers = {'Authorization': 'Bearer ' + self.typeform_api_key}
+    response = requests.get(url, headers=headers)
+    response_json = response.json()
+    form_answers = response_json['items'][0]['answers']
+    return form_answers

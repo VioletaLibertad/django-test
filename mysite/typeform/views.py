@@ -6,19 +6,16 @@ from .services.typeform import Typeform
 def retrieve_form_questions(request):
     typeform_instance = Typeform('tO8Dy6')
     form_data = typeform_instance.retrieve_form_questions()
+    form_answers = typeform_instance.retrieve_form_answers('ugdco41myb5nco9odugdco4hpoqqa81w')
+    complete_form = {'form_name': form_data['form_name']}
+    data_set = []
+    for question in form_data['questions']:
+        for answers in form_answers:
+            if question['id'] == answers['field']['id']:
+                data = {'id': question['id'], 'question': question['name'], 'answer': answers}
+                data_set.append(data)
+    complete_form['data'] = data_set
     return render(request, 'blog/results.html', {
-        'form': form_data, 
+        'complete_form': complete_form
     })
-
-
-
-# def retrieve_form_questions(request):
-#     response = requests.get('https://api.typeform.com/forms/tO8Dy6')
-#     form_response = response.json()
-#     questions = []
-#     for field in form_response['fields']:
-#         questions.append(field['title'])
-#     return render(request, 'blog/results.html', {
-#         'questions': questions, 
-#         'title': form_response['title']
-#         })
+    
