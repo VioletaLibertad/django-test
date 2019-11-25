@@ -24,6 +24,7 @@ To run this project:
 Useful info:
 - https://simpleisbetterthancomplex.com/tutorial/2018/02/03/how-to-use-restful-apis-with-django.html
 - https://www.accordbox.com/blog/how-use-scss-sass-your-django-project-python-way/
+- https://techwithtim.net/tutorials/django/user-registration/
 
 
 © VioletaLibertad 2019
