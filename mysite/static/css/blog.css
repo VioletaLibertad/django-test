@@ -2,14 +2,12 @@ body {
   background: #f5e9d7; }
 
 .header {
-  background-color: #228686; 
-}
-
-.header h1 {
-  font-family: 'Kulim Park', sans-serif;
-  margin: 0;
-  padding: 2rem;
-  color: #ffebcd; }
+  background-color: #228686; }
+  .header h1 {
+    font-family: 'Kulim Park', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    color: #ffebcd; }
 
 /* .main_title {
   font-family: 'Kulim Park', sans-serif;
@@ -21,9 +19,6 @@ body {
   font-family: 'Kulim Park', sans-serif;
   font-weight: bold; }
 
-.post p:first-child {
-  font-style: oblique; }
-
 .new_post {
   color: #228686;
   float: right;
@@ -33,3 +28,8 @@ body {
 
 .glyphicon {
   padding-left: 1rem; }
+
+.post_date {
+  font-style: oblique; }
+
+/*# sourceMappingURL=blog.css.map */

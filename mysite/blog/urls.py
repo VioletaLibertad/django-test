@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+import blog.views as views
 from typeform.views import retrieve_form_questions
 
 urlpatterns = [
