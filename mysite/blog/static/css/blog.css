@@ -32,4 +32,10 @@ body {
   display: block; }
 
 .glyphicon {
-  padding-left: 1rem; }
+  padding-left: 1rem; 
+}
+
+.test-input {
+  background-color: aliceblue;
+  border-radius: 10px;
+}

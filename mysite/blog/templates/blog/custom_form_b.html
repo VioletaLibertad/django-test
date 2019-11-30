@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div>
+  <h1>Testing custom forms. Bootstrap version</h1>
+  <form method="post" novalidate>
+    {% csrf_token %}
+
+    {{form.non_field_errors}}
+
+    {% for hidden_field in form.hidden_fields %}
+      {{ hidden_field.errors }}
+      {{ hidden_field }}
+    {% endfor %}
+
+    <table border="1">
+      {% for field in form.visible_fields %}
+        <tr>
+          <th>{{ field.label_tag }}</th>
+          <td>
+            {{ field.errors }}
+            {% render_field field class="test-input" placeholder=field.name %}
+            {{ field.help_text }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}

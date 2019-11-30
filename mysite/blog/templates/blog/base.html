@@ -1,4 +1,5 @@
-{% load sass_tags %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% sass_src 'css/blog.scss' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}" type="text/css">
   <title>Django Blog</title>
 </head>
 <body>
@@ -20,6 +21,7 @@
       <a href="{% url 'post_new' %}" class="new_post">Nuevo post<i class="fas fa-plus pl-2"></i></a>
     {% endif %}
     <a href="{% url 'results' %}" class="btn btn-info m-3">Resultados Typeform</a>
+    <a href="{% url 'custom_form' %}" class="btn btn-info m-3">Pruebas con Form</a>
   </div>
   <div class="container">
     <div class="mt-5">

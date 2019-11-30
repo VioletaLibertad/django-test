@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'blog.apps.BlogConfig',
     'typeform.apps.TypeformConfig',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
